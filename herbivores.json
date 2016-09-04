@@ -1,0 +1,19 @@
+{
+	"leafeaters": [
+		{
+			"id": 1,
+			"name": "Brontosaurus",
+			"size": "xx-Large"
+		},
+		{
+			"id": 2,
+			"name": "Stegasaurus",
+			"size": "x-large"
+		},
+		{
+			"id": 3,
+			"name": "Eocursor",
+			"size": "small"
+		}
+	]
+}

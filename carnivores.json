@@ -1,0 +1,19 @@
+{
+	"meateaters": [
+		{
+			"id": 1,
+			"name": "T-Rex",
+			"size": "Large"
+		},
+		{
+			"id": 2,
+			"name": "Rapter",
+			"size": "small"
+		},
+		{
+			"id": 3,
+			"name": "Troodon",
+			"size": "medium"
+		}
+	]
+}
