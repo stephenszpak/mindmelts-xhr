@@ -1,42 +1,32 @@
-var Predator = (function(showCarnivores){
-	var output = document.getElementById("outputIt");
-	var carnivoreArray = [];
-	showCarnivores.getCarnivore = function(addCarnivore) {
-		for (var i = 0; i < addCarnivore.meateaters.length; i++) {
-			carnivoreArray = addCarnivore.meateaters.length[i]
-		}
-		outputIt.innerHTML = Predator.loadCarnivores(showCarnivores);
-	};
 
-  return showCarnivores
+var outputCarnivore = document.getElementById("outputIt");
+var outputHerbivore = document.getElementById("herbOutput");
 
-})(Predator || {});
+function showCarnivores (carnivore) {
+	var rawr = "";
+	for (var i = 0; i < carnivore.meateaters.length; i++) {
 
-// function showHerbivores () {
+		rawr += "<div>";
+		rawr += `<h4>${carnivore.meateaters[i].name}</h4>`;
+		rawr += `<p>${carnivore.meateaters[i].size}</p>`;
+		rawr += "</div>";
+	}
+	outputCarnivore.innerHTML = rawr;
+};
 
-// }
 
-// 	Predator.loadCarnivores(showCarnivores);
 
-// 	var LangConverter = (function(german) {
-// 	var englishToGerman = {
-// 		Merry: "Frohe",
-// 		Christmas: "Weihnachten",
-// 		And: "und",
-// 		Happy: "glücklich",
-// 		New: "neu",
-// 		Year: "Jahr"
-// 	};
-// 	var translatedGerman = [];
-// 	german.getGerman = function(addedLang) {
-// 		 for (var prop in englishToGerman) {
-// 			 for (var i = 0; i < addedLang.length; i++) {
-// 				if (addedLang[i] === prop) {
-// 					translatedGerman.push(englishToGerman[prop]);
-// 				}
-// 			}
-// 		}
-// 		LangConverter.setLangConverter(translatedGerman);
-// 	};
-// return german;
-// })(LangConverter || {});
+function showHerbivores (herbivore) {
+	var meow = "";
+	for (var i = 0; i < herbivore.leafeaters.length; i++) {
+
+		meow += "<div>";
+		meow += `<h4>${herbivore.leafeaters[i].name}</h4>`;
+		meow += `<p>${herbivore.leafeaters[i].size}</p>`;
+		meow += "</div>";
+	}
+	outputHerbivore.innerHTML = meow;
+};
+
+Predator.loadCarnivores()
+Predator.loadHerbivores()
